@@ -1,0 +1,59 @@
+[[]]
+name = 'elpaca'
+html_url = 'https://github.com/progfolio/elpaca'
+description = 'An elisp package manager'
+stargazers_count = 110
+
+[[]]
+name = 'org-glossary'
+html_url = 'https://github.com/tecosaur/org-glossary'
+description = 'Glossary, Acronyms, and Index capability within Org'
+stargazers_count = 65
+
+[[]]
+name = 'engrave-faces'
+html_url = 'https://github.com/tecosaur/engrave-faces'
+description = 'Convert font-lock faces to other formats'
+stargazers_count = 74
+
+[[]]
+name = 'doom-icon'
+html_url = 'https://github.com/eccentric-j/doom-icon'
+description = 'A proposed doom Emacs icon'
+stargazers_count = 64
+
+[[]]
+name = 'elisp-guide'
+html_url = 'https://github.com/abo-abo/elisp-guide'
+description = 'A quick guide to Emacs Lisp programming'
+stargazers_count = 48
+
+[[]]
+name = 'emacs-config'
+html_url = 'https://github.com/tecosaur/emacs-config'
+description = 'My configuration for Doom Emacs. Mirror of https://git.tecosaur.net/tec/emacs-config.'
+stargazers_count = 848
+
+[[]]
+name = 'zgenom'
+html_url = 'https://github.com/jandamm/zgenom'
+description = 'A lightweight and fast plugin manager for ZSH'
+stargazers_count = 230
+
+[[]]
+name = 'copy-as-org-mode'
+html_url = 'https://github.com/kuanyui/copy-as-org-mode'
+description = 'A Firefox Add-on (WebExtension) to copy selected web page into Org-mode formatted text!'
+stargazers_count = 141
+
+[[]]
+name = 'orderless'
+html_url = 'https://github.com/oantolin/orderless'
+description = 'Emacs completion style that matches multiple regexps in any order'
+stargazers_count = 408
+
+[[]]
+name = 'nix-emacs-ci'
+html_url = 'https://github.com/purcell/nix-emacs-ci'
+description = 'Emacs installations for continuous integration'
+stargazers_count = 155
