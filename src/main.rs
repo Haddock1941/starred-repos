@@ -47,7 +47,7 @@ fn main() {
                             match toml::to_string(&repos) {
                                 Ok(toml_string) => {
                                     if let Err(err) = fs::write(toml_file, toml_string) {
-                                        println!("Writing to {} failed with {}", toml_file, err);
+                                        println!("Writing to {} failed with {:?}", toml_file, err);
                                     }
                                 }
                                 Err(err) => println!("Failed serializing toml with {:?}", err),
@@ -59,7 +59,7 @@ fn main() {
                             match serde_json::to_string(&repos) {
                                 Ok(json_string) => {
                                     if let Err(err) = fs::write(json_file, json_string) {
-                                        println!("Writing to {} failed with {}", json_file, err);
+                                        println!("Writing to {} failed with {:?}", json_file, err);
                                     }
                                 }
                                 Err(err) => println!("Failed serializing json with {:?}", err),
@@ -115,12 +115,12 @@ fn get_starred_repos_for_user(user: &str) -> Result<Vec<Repo>> {
 fn write_cache(user: &str, response: &str) {
     if fs::read_dir("cache").is_err() {
         if let Err(err) = fs::create_dir("cache") {
-            println!("Error creating cache: {}", err);
+            println!("Error creating cache: {:?}", err);
         }
     }
     match fs::write(format!("cache/{}", user), response) {
         Ok(_) => (),
-        Err(err) => println!("Error writing to cache: {}", err),
+        Err(err) => println!("Error writing to cache: {:?}", err),
     }
 }
 
