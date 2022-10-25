@@ -78,6 +78,7 @@ fn main() {
     }
 }
 
+/// make request to github api for user
 fn get_starred_repos_for_user(user: &str) -> Result<Vec<Repo>> {
     if let Some(cached_response) = get_cache(user) {
         let repos: Vec<Repo> = serde_json::from_str(&cached_response)?;
@@ -112,6 +113,7 @@ fn get_starred_repos_for_user(user: &str) -> Result<Vec<Repo>> {
     Ok(repos)
 }
 
+/// write cache for user
 fn write_cache(user: &str, response: &str) {
     if fs::read_dir("cache").is_err() {
         if let Err(err) = fs::create_dir("cache") {
@@ -124,6 +126,8 @@ fn write_cache(user: &str, response: &str) {
     }
 }
 
+/// get cache for user
+/// returns None on cache miss
 fn get_cache(user: &str) -> Option<String> {
     match fs::read_to_string(format!("cache/{}", user)) {
         Ok(cached_response) => Some(cached_response),
@@ -131,12 +135,14 @@ fn get_cache(user: &str) -> Option<String> {
     }
 }
 
+/// clear cache by deleting dir
 fn clear_cache() {
     if let Err(err) = fs::remove_dir_all("cache") {
         println!("Failed clearing cache with {:?}", err);
     }
 }
 
+/// print repos in term
 fn list_repos(repos: &[Repo]) {
     for repo in repos
         .into_iter()
